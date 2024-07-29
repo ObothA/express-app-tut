@@ -1,0 +1,22 @@
+{
+  "name": "express-postgres-knex-app",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "set NODE_ENV=dev && set PGDB_PASSWORD=general && DEBUG=express-postgres-knex-app:* node ./bin/www",
+    "dev": "set NODE_ENV=dev && set PGDB_PASSWORD=general && DEBUG=express-postgres-knex-app:*  ./node_modules/nodemon/bin/nodemon.js ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "knex": "^3.1.0",
+    "morgan": "~1.9.1",
+    "pg": "^8.12.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
