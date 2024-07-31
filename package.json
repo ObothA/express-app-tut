@@ -4,7 +4,11 @@
   "private": true,
   "scripts": {
     "start": "set NODE_ENV=dev && set PGDB_PASSWORD=general && DEBUG=express-postgres-knex-app:* node ./bin/www",
-    "dev": "NODE_ENV=development PGDB_PASSWORD=general DEBUG=express-postgres-knex-app:*  ./node_modules/nodemon/bin/nodemon.js ./bin/www"
+    "dev": "npm run migrations-dev && npm run dev-run",
+    "dev-run": "NODE_ENV=development PGDB_PASSWORD=general DEBUG=express-tut:* ./node_modules/nodemon/bin/nodemon.js ./bin/www",
+    "dev-refresh-db": "npm run migrations-dev && seed-dev",
+    "migrations-dev": "NODE_ENV=development PGDB_PASSWORD=general npx knex migrate:latest",
+    "seed-dev": "npx knex seed:run"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
