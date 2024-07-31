@@ -12,4 +12,11 @@ async function getUser(req, res, next) {
     return res.json(user);
 }
 
-module.exports = { getAllUsers, getUser };
+async function createUser(req, res, next) {
+    const { name } = req.body;
+    const inserted = await DB('users').insert({ name }, ['id', 'name']);
+    console.log(inserted);
+    return res.json(inserted);
+}
+
+module.exports = { getAllUsers, getUser, createUser };
