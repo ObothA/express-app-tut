@@ -4,6 +4,7 @@
  * @type { Object.<string, import("knex").Knex.Config> }
  */
 
+require('dotenv').config();
 const PGDB_PASSWORD = process.env.PGDB_PASSWORD;
 console.log("PGDB_PASSWORD");
 console.log(PGDB_PASSWORD);
