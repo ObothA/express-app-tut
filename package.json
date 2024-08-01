@@ -7,7 +7,7 @@
     "dev": "npm run migrations-dev && npm run dev-run",
     "dev-run": "./node_modules/nodemon/bin/nodemon.js ./bin/www",
     "dev-refresh-db": "npm run migrations-dev && seed-dev",
-    "migrations-dev": "npx knex migrate:latest",
+    "migrations-dev": "npx knex migrate:latest --env development",
     "seed-dev": "npx knex seed:run"
   },
   "dependencies": {

@@ -24,7 +24,8 @@ module.exports = {
       host: 'localhost',
       database: 'express-app',
       user: 'general',
-      password: PGDB_PASSWORD
+      password: PGDB_PASSWORD,
+      timezone: 'UTC',
     },
     pool: {
       min: 2,
